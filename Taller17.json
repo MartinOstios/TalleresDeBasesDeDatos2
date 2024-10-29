@@ -1,0 +1,278 @@
+[
+    {
+        "isbn": "978-0-14-028333-4",
+        "titulo": "el gran gatsby",
+        "nombreautor": "f. scott fitzgerald",
+        "genero": "novela",
+        "año": 1925
+    },
+    {
+        "isbn": "978-0-7432-7356-6",
+        "titulo": "ángeles y demonios",
+        "nombreautor": "dan brown",
+        "genero": "thriller",
+        "año": 2000
+    },
+    {
+        "isbn": "978-0-452-28423-5",
+        "titulo": "rebelión en la granja",
+        "nombreautor": "george orwell",
+        "genero": "satira",
+        "año": 1945
+    },
+    {
+        "isbn": "978-84-376-0494-8",
+        "titulo": "la sombra del viento",
+        "nombreautor": "carlos ruiz zafón",
+        "genero": "misterio",
+        "año": 2001
+    },
+    {
+        "isbn": "978-0-14-028333-5",
+        "titulo": "matar a un ruiseñor",
+        "nombreautor": "harper lee",
+        "genero": "novela",
+        "año": 1960
+    },
+    {
+        "isbn": "978-0-7432-7356-7",
+        "titulo": "inferno",
+        "nombreautor": "dan brown",
+        "genero": "thriller",
+        "año": 2013
+    },
+    {
+        "isbn": "978-0-452-28423-6",
+        "titulo": "fahrenheit 451",
+        "nombreautor": "ray bradbury",
+        "genero": "ciencia ficción",
+        "año": 1953
+    },
+    {
+        "isbn": "978-84-376-0494-9",
+        "titulo": "el nombre de la rosa",
+        "nombreautor": "umberto eco",
+        "genero": "misterio",
+        "año": 1980
+    },
+    {
+        "isbn": "978-0-14-028333-6",
+        "titulo": "orgullo y prejuicio",
+        "nombreautor": "jane austen",
+        "genero": "romance",
+        "año": 1813
+    },
+    {
+        "isbn": "978-0-7432-7356-8",
+        "titulo": "el símbolo perdido",
+        "nombreautor": "dan brown",
+        "genero": "thriller",
+        "año": 2009
+    },
+    {
+        "isbn": "978-0-452-28423-7",
+        "titulo": "crimen y castigo",
+        "nombreautor": "fiódor dostoyevski",
+        "genero": "novela",
+        "año": 1866
+    },
+    {
+        "isbn": "978-84-376-0494-0",
+        "titulo": "el hobbit",
+        "nombreautor": "j.r.r. tolkien",
+        "genero": "fantasía",
+        "año": 1937
+    },
+    {
+        "isbn": "978-0-14-028333-7",
+        "titulo": "moby dick",
+        "nombreautor": "herman melville",
+        "genero": "aventura",
+        "año": 1851
+    },
+    {
+        "isbn": "978-0-7432-7356-9",
+        "titulo": "la fortaleza digital",
+        "nombreautor": "dan brown",
+        "genero": "thriller",
+        "año": 1998
+    },
+    {
+        "isbn": "978-0-452-28423-8",
+        "titulo": "el retrato de dorian gray",
+        "nombreautor": "oscar wilde",
+        "genero": "fantasía",
+        "año": 1890
+    },
+    {
+        "isbn": "978-84-376-0494-1",
+        "titulo": "el señor de los anillos",
+        "nombreautor": "j.r.r. tolkien",
+        "genero": "fantasía",
+        "año": 1954
+    },
+    {
+        "isbn": "978-0-14-028333-8",
+        "titulo": "las aventuras de tom sawyer",
+        "nombreautor": "mark twain",
+        "genero": "aventura",
+        "año": 1876
+    },
+    {
+        "isbn": "978-0-7432-7356-0",
+        "titulo": "la divina comedia",
+        "nombreautor": "dante alighieri",
+        "genero": "poesía",
+        "año": 1320
+    },
+    {
+        "isbn": "978-0-452-28423-9",
+        "titulo": "drácula",
+        "nombreautor": "bram stoker",
+        "genero": "horror",
+        "año": 1897
+    },
+    {
+        "isbn": "978-84-376-0494-2",
+        "titulo": "el principito",
+        "nombreautor": "antoine de saint-exupéry",
+        "genero": "fantasía",
+        "año": 1943
+    },
+
+    {
+        "filter": { "titulo": "el gran gatsby"},
+        "update": {
+            "$set": {
+                "año": 1950,
+                "genero": "clásico"
+            }
+        }
+    },
+    {
+        "filter": {
+            "año": { "$gt": 1900 }
+        },
+        "update": {
+            "$set": {
+                "nombreautor": "autor desconocido",
+                "genero": "histórico"
+            }
+        }
+    },
+    {
+        "filter": {
+            "año": {"$lte": 1945 }
+        },
+        "update": {
+            "$set": {
+                "genero": "literatura clásica"
+            }
+        }
+    },
+    {
+        "filter": {
+            "$and": [ {"titulo": "la sombra del viento"}, { "nombreautor": "autor desconocido" } ]
+        },
+        "update": {
+            "$set": {
+                "autor": "carlos ruiz zafón",
+                "año": 2005
+            }
+        }
+    },
+    {
+        "filter": {
+            "nombreautor": { "$in": ["mark twain"]}
+        },
+        "update": {
+            "$set": {
+                "genero": "suspenso histórico",
+                "año": 2015
+            }
+        }
+    },
+    {
+        "filter": {
+            "año": {"$lt": 1950 }
+        },
+        "update": {
+            "$set": {
+                "genero": "obra maestra"
+            }
+        }
+    },
+    {
+        "filter": {
+            "$or": [ { "genero": "thriller" },{ "genero": "misterio" }  ]
+        },
+        "update": { "$set": {
+                "nombreautor": "autor secreto"
+            }
+        }
+    },
+    {
+        "filter": {
+            "titulo": "orgullo y prejuicio"
+        },
+        "update": {
+            "$set": {
+                "año": 1820,
+                "nombreautor": "jane austen",
+                "genero": "romance histórico"
+            }
+        }
+    },
+    {
+        "filter": {
+            "nombreautor": "autor desconocido", "año": {"$gt": 1000 }
+        },
+        "update": {
+            "$set": {
+                "genero": "suspenso",
+                "año": 2011
+            }
+        }
+    },
+    {
+        "filter": {
+            "$and": [ { "año": { "$gt": 1800  }  },{ "año": { "$lt": 1900}  } ]
+        },
+        "update": {
+            "$set": {
+                "genero": "clásico moderno",
+                "nombreautor": "desconocido"
+            }
+        }
+    },
+    {
+        "isbn": "978-0-14-028333-4" 
+    },
+    {
+        "año": { "$gt": 2000 }
+    },
+    {
+        "año": { "$lt": 1950 }
+    },
+    {
+        "año": { "$gte": 2005 }
+    },
+    {
+        "año": { "$lte": 2000 }
+    },
+    {
+        "nombreautor": { "$in": ["autor secreto", "carlos ruiz zafón"] }
+    },
+    {
+        "$and": [
+            { "año": { "$gt": 1950 } },
+            { "genero": "histórico" }
+        ]
+    },
+    {
+        "$or": [
+            { "genero": "suspenso" },
+            { "año": { "$gt": 2010 } }
+        ]
+    }    
+]
