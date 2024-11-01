@@ -1,0 +1,133 @@
+// Libros
+[
+    {
+        "titulo": "Cien años de soledad",
+        "autor_id": 1,
+        "genero_id": 2,
+        "isbn": "1234"
+    },
+    {
+        "titulo": "El Aleph",
+        "autor_id": 2,
+        "genero_id": 1,
+        "isbn": "5678"
+    },
+    {
+        "titulo": "Rayuela",
+        "autor_id": 3,
+        "genero_id": 6,
+        "isbn": "91011"
+    },
+    {
+        "titulo": "La ciudad y los perros",
+        "autor_id": 4,
+        "genero_id": 3,
+        "isbn": "121314"
+    },
+    {
+        "titulo": "Veinte poemas de amor y una canción desesperada",
+        "autor_id": 5,
+        "genero_id": 3,
+        "isbn": "151617"
+    },
+    {
+        "titulo": "La casa de los espíritus",
+        "autor_id": 6,
+        "genero_id": 6,
+        "isbn": "181920"
+    },
+    {
+        "titulo": "El amor en los tiempos del cólera",
+        "autor_id": 1,
+        "genero_id": 3,
+        "isbn": "212223"
+    },
+    {
+        "titulo": "Ficciones",
+        "autor_id": 2,
+        "genero_id": 1,
+        "isbn": "1234"
+    }
+]
+
+
+[
+    {
+        "_id": 1,
+        "nombre": "Gabriel García Márquez",
+        "nacionalidad": "Colombiano"
+    },
+    {
+        "_id": 2,
+        "nombre": "Jorge Luis Borges",
+        "nacionalidad": "Argentino"
+    },
+    {
+        "_id": 3,
+        "nombre": "Julio Cortázar",
+        "nacionalidad": "Argentino"
+    },
+    {
+        "_id": 4,
+        "nombre": "Mario Vargas Llosa",
+        "nacionalidad": "Peruano"
+    },
+    {
+        "_id": 5,
+        "nombre": "Pablo Neruda",
+        "nacionalidad": "Chileno"
+    },
+    {
+        "_id": 6,
+        "nombre": "Isabel Allende",
+        "nacionalidad": "Chilena"
+    }
+]
+// Géneros
+[
+    {
+        "_id": 1,
+        "nombre": "Ciencia ficción"
+    },
+    {
+        "_id": 2,
+        "nombre": "Acción"
+    },
+    {
+        "_id": 3,
+        "nombre": "Romance"
+    },
+    {
+        "_id": 4,
+        "nombre": "Terror"
+    },
+    {
+        "_id": 5,
+        "nombre": "Comedia"
+    },
+    {
+        "_id": 6,
+        "nombre": "Drama"
+    }
+]
+
+{"isbn": "1234"}
+
+{
+    "$lookup": {
+        "from": "autores",
+        "localField": "autor_id",
+        "foreignField": "_id",
+        "as": "autor_info"
+    }
+}
+
+{
+    "$lookup": {
+        "from": "generos",
+        "localField": "genero_id",
+        "foreignField": "_id",
+        "as": "genero_info"
+    }
+}
+
