@@ -1,0 +1,179 @@
+[
+    {
+        "ProductoID": 1,
+        "Nombre": "Lámpara",
+        "Descripcion": "Lámpara de mesa LED",
+        "Precio": 30,
+        "Categoria": {
+            "CategoriaID": 3,
+            "NombreCategoria": "Iluminación"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 1,
+                "Texto": "Luz perfecta para leer",
+                "Cliente": "Carlos"
+            },
+            {
+                "ComentarioID": 2,
+                "Texto": "Ahorra energía",
+                "Cliente": "Laura"
+            }
+        ]
+    },
+    {
+        "ProductoID": 2,
+        "Nombre": "Silla",
+        "Descripcion": "Silla ergonómica de oficina",
+        "Precio": 120,
+        "Categoria": {
+            "CategoriaID": 4,
+            "NombreCategoria": "Muebles"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 3,
+                "Texto": "Muy cómoda",
+                "Cliente": "Ana"
+            }
+        ]
+    },
+    {
+        "ProductoID": 3,
+        "Nombre": "Espejo",
+        "Descripcion": "Espejo decorativo redondo",
+        "Precio": 45,
+        "Categoria": {
+            "CategoriaID": 4,
+            "NombreCategoria": "Muebles"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 4,
+                "Texto": "Bonito diseño",
+                "Cliente": "Sofía"
+            },
+            {
+                "ComentarioID": 5,
+                "Texto": "Excelente calidad",
+                "Cliente": "Jorge"
+            }
+        ]
+    },
+    {
+        "ProductoID": 4,
+        "Nombre": "Mesa de centro",
+        "Descripcion": "Mesa de centro de madera",
+        "Precio": 75,
+        "Categoria": {
+            "CategoriaID": 4,
+            "NombreCategoria": "Muebles"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 6,
+                "Texto": "Ideal para la sala",
+                "Cliente": "Fernando"
+            }
+        ]
+    },
+    {
+        "ProductoID": 5,
+        "Nombre": "Alfombra",
+        "Descripcion": "Alfombra suave",
+        "Precio": 50,
+        "Categoria": {
+            "CategoriaID": 5,
+            "NombreCategoria": "Decoración"
+        },
+        "Comentarios": []
+    },
+    {
+        "ProductoID": 6,
+        "Nombre": "Cortinas",
+        "Descripcion": "Cortinas blackout",
+        "Precio": 60,
+        "Categoria": {
+            "CategoriaID": 5,
+            "NombreCategoria": "Decoración"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 7,
+                "Texto": "Bloquea la luz perfectamente",
+                "Cliente": "Marta"
+            }
+        ]
+    },
+    {
+        "ProductoID": 7,
+        "Nombre": "Estante",
+        "Descripcion": "Estante flotante de madera",
+        "Precio": 25,
+        "Categoria": {
+            "CategoriaID": 4,
+            "NombreCategoria": "Muebles"
+        },
+        "Comentarios": []
+    },
+    {
+        "ProductoID": 8,
+        "Nombre": "Ventilador",
+        "Descripcion": "Ventilador de escritorio",
+        "Precio": 35,
+        "Categoria": {
+            "CategoriaID": 6,
+            "NombreCategoria": "Electrodomésticos"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 8,
+                "Texto": "Muy silencioso",
+                "Cliente": "Roberto"
+            }
+        ]
+    },
+    {
+        "ProductoID": 9,
+        "Nombre": "Tetera",
+        "Descripcion": "Tetera de acero inoxidable",
+        "Precio": 20,
+        "Categoria": {
+            "CategoriaID": 6,
+            "NombreCategoria": "Electrodomésticos"
+        },
+        "Comentarios": []
+    },
+    {
+        "ProductoID": 10,
+        "Nombre": "Cafetera",
+        "Descripcion": "Cafetera eléctrica",
+        "Precio": 90,
+        "Categoria": {
+            "CategoriaID": 6,
+            "NombreCategoria": "Electrodomésticos"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 9,
+                "Texto": "Hace un buen café",
+                "Cliente": "Silvia"
+            }
+        ]
+    }
+]
+
+db.Productos.find(
+  {},
+  { "Categoria": 0, "Comentarios": 0 }
+)
+
+db.Productos.find(
+  {},
+  { "Comentarios": 0 }
+)
+
+db.Productos.find(
+  {},
+  { "Categoria": 0 }
+)
