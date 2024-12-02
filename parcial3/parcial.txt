@@ -1,0 +1,84 @@
+PRIMERA PREGUNTA:
+Se tiene el siguiente esquema normalizado.
+- Productos.
+- Pedidos
+- Detalle_Pedidos
+
+Producto:
+{
+    "_id": "producto001",
+    "nombre": "Camiseta de algodón",
+    "descripcion": "Camiseta 100% de algodón", 
+    "precio": 15.99
+    "stock": 200
+}
+
+Pedido:
+{
+    "_id": 
+    "cliente"
+    "fecha_pedido"
+    "estado"
+    "total"
+}
+
+Detalle pedido
+{
+    "_id"
+    "pedido_id"
+    "producto_id"
+    "cantidad"
+    "precio_unitario"
+}
+
+Realizar el CRUD en Java para este esquema normalizado.
+
+SEGUNDA PREGUNTA:
+Realizar las siguientes consultas para el anterior esquema normalizado:
+- Obtener los productos con un precio mayor a 20 dolares.
+- Obtener los pedidos que tengan un total mayor a 100 dolares
+- Obtener los pedidos en donde exista un detalle de pedido con el producto010
+
+TERCERA PREGUNTA:
+
+Se tiene el siguiente esquema desnormalizado.
+
+{
+    "_id": "reserva001",
+    "cliente": {
+        "nombre": "Ana Gómez",
+        "correo": "ana.gomez@example.com",
+        "telefono": "+54111223344",
+        "direccion": "Calle Ficticia"
+    },
+    "habitacion": {
+        "tipo": "Suite",
+        "numero": 101,
+        "precio_noche": 200.00,
+        "capacidad":
+        "descripcion"
+    }
+
+    "fecha_entrada":
+    "fecha_salida":
+    "total":
+    "estado_pago":
+    "metodo_pago":
+    "fecha_reserva"
+}
+
+Realizar el CRUD en Java para este esquema desnormalizado.
+
+CUARTA PREGUNTA.
+Realizar las siguientes consultas para el anterior esquema desnormalizado.
+- Obtener las habitaciones reservadas de tipo “Sencilla”
+- Obtener la sumatoria total de las reservas pagadas.
+- Obtener las reservas de las habitaciones con un precio_noche mayor a 100 dolares.
+
+QUINTA PREGUNTA.
+Se tiene una base de datos de grafos para una red social de personas que hizo comentarios a otra
+persona.
+Nodo Persona: con los atributos nombre, correo, edad, ciudad
+Relación Comentario: Con el atributo descripción.
+Persona -&gt; Comentario -&gt; Persona
+Hacer el código en java para crear una persona, y hacer la relación comentario con otra persona.
